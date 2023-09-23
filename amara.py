@@ -16,6 +16,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 WELCOME_CHANNEL_ID = int(os.getenv('WELCOME_CHANNEL_ID'))
 VERIFIED_ROLE_ID = int(os.getenv('VERIFIED_ROLE_ID'))
+ERROR_CHANNEL_ID = int(os.getenv('ERROR_CHANNEL_ID'))
 GOOD_THINGS_CHANNEL_ID = int(os.getenv('GOOD_THINGS_CHANNEL_ID'))
 OFF_TOPIC_CHANNEL_ID = int(os.getenv('OFF_TOPIC_CHANNEL_ID'))
 CC_CHAT_CHANNEL_ID = int(os.getenv('CC_CHAT_CHANNEL_ID'))
@@ -47,8 +48,11 @@ async def random_quote():
             community_hall_channel = bot.get_channel(COMMUNITY_HALL_CHANNEL_ID)
             if community_hall_channel:
                 await community_hall_channel.send(selected_quote)
-        except discord.HTTPException as e:
-            print(f'Error sending random quote: {e}')
+        except Exception as e:
+        # Log the error in the specified error channel
+            error_channel = bot.get_channel(ERROR_CHANNEL_ID)
+            if error_channel:
+                await error_channel.send(f'Error in random_quote: {e}')
 
 @random_quote.before_loop
 async def before_random_quote():
@@ -84,8 +88,11 @@ async def post_cc_chat_question():
             cc_chat_channel = bot.get_channel(CC_CHAT_CHANNEL_ID)
             if cc_chat_channel:
                 await cc_chat_channel.send(f"{selected_question}")
-        except discord.HTTPException as e:
-            print(f'Error sending cc-chat question: {e}')
+        except Exception as e:
+        # Log the error in the specified error channel
+            error_channel = bot.get_channel(ERROR_CHANNEL_ID)
+            if error_channel:
+                await error_channel.send(f'Error in cc_chat_question: {e}')
 
 @post_cc_chat_question.before_loop
 async def before_post_cc_chat_question():
@@ -121,8 +128,11 @@ async def post_good_things():
             good_things_channel = bot.get_channel(GOOD_THINGS_CHANNEL_ID)
             if good_things_channel:
                 await good_things_channel.send(selected_message)
-        except discord.HTTPException as e:
-            print(f'Error sending good things message: {e}')
+        except Exception as e:
+        # Log the error in the specified error channel
+            error_channel = bot.get_channel(ERROR_CHANNEL_ID)
+            if error_channel:
+                await error_channel.send(f'Error in good_things: {e}')
 
 @post_good_things.before_loop
 async def before_post_good_things():
@@ -158,8 +168,11 @@ async def post_question():
             off_topic_channel = bot.get_channel(OFF_TOPIC_CHANNEL_ID)
             if off_topic_channel:
                 await off_topic_channel.send(f"Question of the week:\n{selected_question}")
-        except discord.HTTPException as e:
-            print(f'Error sending question: {e}')
+        except Exception as e:
+        # Log the error in the specified error channel
+            error_channel = bot.get_channel(ERROR_CHANNEL_ID)
+            if error_channel:
+                await error_channel.send(f'Error in 0ff_topic_question: {e}')
 
 @post_question.before_loop
 async def before_post_question():
@@ -195,8 +208,11 @@ async def on_member_update(before, after):
             welcome_channel = bot.get_channel(COMMUNITY_HALL_CHANNEL_ID)
             if welcome_channel:
                 await welcome_channel.send(selected_greeting.replace("{member.mention}", after.mention))
-        except discord.HTTPException as e:
-            print(f'Error sending welcome message: {e}')
+        except Exception as e:
+        # Log the error in the specified error channel
+            error_channel = bot.get_channel(ERROR_CHANNEL_ID)
+            if error_channel:
+                await error_channel.send(f'Error in community_channel_message: {e}')
 
 # Start the bot
 TOKEN = os.getenv('DISCORD_TOKEN')
