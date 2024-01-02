@@ -1,13 +1,24 @@
 import os
 import discord
 import random
+import json
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
-from messages import GREETINGS, RANDOM_QUOTES, GOOD_THINGS_MESSAGES, QUESTIONS, CC_QUESTIONS
 
 # Load environment variables from .env file
 load_dotenv()
+
+# Load messages from messages.json
+with open("messages.json", "r") as f:
+    messages = json.load(f)
+
+# Access the lists using the keys
+GREETINGS = messages["GREETINGS"]
+RANDOM_QUOTES = messages["RANDOM_QUOTES"]
+GOOD_THINGS_MESSAGES = messages["GOOD_THINGS_MESSAGES"]
+QUESTIONS = messages["QUESTIONS"]
+CC_QUESTIONS = messages["CC_QUESTIONS"]
 
 intents = discord.Intents.default()
 intents.members = True

@@ -1,4 +1,5 @@
-GREETINGS = [
+{
+"GREETINGS": [
     "Hello there, {member.mention}! Welcome to our cozy corner of the internet! What's your go-to relaxation technique?",
     "Greetings, {member.mention}! If you were a superhero, what would your superpower be?",
     "Hey, sunshine! What's brought a smile to your face today, {member.mention}?",
@@ -13,28 +14,33 @@ GREETINGS = [
     "Hey, {member.mention}! What's your ultimate winter comfort food when you need warming through?",
     "Welcome, {member.mention}! Are you more of a morning person or a night owl?",
     "Well hello, {member.mention}! What's the last book that kept you up all night reading?"
-]
+    ],
 
-RANDOM_QUOTES = [
-    "The greatest wealth is health - Virgil",
-    "Happiness is not something ready-made. It comes from your own actions - Dalai Lama",
-    "Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship - Buddha",
-    "To keep the body in good health is a duty... otherwise, we shall not be able to keep our mind strong and clear - Buddha",
-    "Take care of your body. It's the only place you have to live - Jim Rohn",
-    "The groundwork for all happiness is good health - Leigh Hunt",
-    "A healthy outside starts from the inside - Robert Urich",
-    "He who has health has hope, and he who has hope has everything - Thomas Carlyle",
-    "To enjoy the glow of good health, you must exercise - Gene Tunney",
-    "The secret of health for both mind and body is not to mourn for the past, not to worry about the future, or not to anticipate troubles, but to live in the present moment wisely and earnestly - Buddha",
-    "Your body is a temple, but only if you treat it as one - Astrid Alauda",
-    "Physical fitness is not only one of the most important keys to a healthy body, but it is also the basis of dynamic and creative intellectual activity - John F. Kennedy",
-    "The doctor of the future will no longer treat the human frame with drugs, but rather will cure and prevent disease with nutrition - Thomas Edison",
-    "Wellness is the complete integration of body, mind, and spirit - the realisation that everything we do, think, feel, and believe has an effect on our state of well-being - Greg Anderson",
-    "Caring for your body, mind, and spirit is your greatest and grandest responsibility. It's about listening to the needs of your soul and then honouring them - Kristi Ling",
-    "The greatest glory in living lies not in never falling, but in rising every time we fall - Nelson Mandela"
-]
+"RANDOM_QUOTES": [
+    "The greatest wealth is health. - Virgil",
+    "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama",
+    "Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship. - Buddha",
+    "To keep the body in good health is a duty... otherwise, we shall not be able to keep our mind strong and clear. - Buddha",
+    "Take care of your body. It's the only place you have to live. - Jim Rohn",
+    "The groundwork for all happiness is good health. - Leigh Hunt",
+    "A healthy outside starts from the inside. - Robert Urich",
+    "He who has health has hope, and he who has hope has everything. - Thomas Carlyle",
+    "To enjoy the glow of good health, you must exercise. - Gene Tunney",
+    "The secret of health for both mind and body is not to mourn for the past, not to worry about the future, or not to anticipate troubles, but to live in the present moment wisely and earnestly. - Buddha",
+    "Your body is a temple, but only if you treat it as one. - Astrid Alauda",
+    "Physical fitness is not only one of the most important keys to a healthy body, but it is also the basis of dynamic and creative intellectual activity. - John F. Kennedy",
+    "The doctor of the future will no longer treat the human frame with drugs, but rather will cure and prevent disease with nutrition. - Thomas Edison",
+    "Wellness is the complete integration of body, mind, and spirit - the realisation that everything we do, think, feel, and believe has an effect on our state of wellbeing. - Greg Anderson",
+    "Caring for your body, mind, and spirit is your greatest and grandest responsibility. It's about listening to the needs of your soul and then honouring them. - Kristi Ling",
+    "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+    "As you think, you shall become. - Bruce Lee",
+    "Never understimate the ability of a small group of dedicated people to change the world. Indeed, it is the only thing that ever has. - Margaret Mead",
+    "Yesterday is gone. Tomorrow has yet to come. We have only today. Let us begin. - Mother Teresa",
+    "Laughter is the shortest distance between two people. - Victor Borge",
+    "Breathe. Take care. Stand still for a minute. What you are looking for might just be looking for you too. - Cleo Wade"
+    ],
 
-GOOD_THINGS_MESSAGES = [
+"GOOD_THINGS_MESSAGES": [
     "Did you know that practicing gratitude can boost your mood? Share three things that brought a smile to your face today.",
     "Gratitude is like a magnet for positivity. Join us in spreading good vibes by sharing three aspects of your life that you're thankful for.",
     "Gratitude is the key to a happier mindset. Let's create a wave of positivity together. Can you share three things that you're currently feeling grateful for?",
@@ -75,9 +81,9 @@ GOOD_THINGS_MESSAGES = [
     "Warm hearts spread happiness, and gratitude is the warmth that keeps them aglow. Name three things that have warmed your heart with gratitude, and let's keep the flame alive!",
     "Every day is a fresh start, and gratitude can make it even brighter. What are three things you're grateful to wake up to each day?",
     "Life is a treasure trove of experiences, and gratitude helps you uncover its gems. List three things that you're currently holding close with gratitude, and let's cherish them together."
-]
+    ],
 
-QUESTIONS = [
+"QUESTIONS": [
     "If you could switch lives with someone for a day, who would it be and why?",
     "What's the most adventurous thing you've ever done or would like to do?",
     "If you had to eat one cuisine for the rest of your life, which one would it be?",
@@ -138,9 +144,9 @@ QUESTIONS = [
     "What's your favorite way to spend a rainy day?",
     "If you could visit any planet in our solar system, which one would you pick and why?",
     "What's a weird or unique talent you have that not many people know about?"
-]
+    ],
 
-CC_QUESTIONS = [
+"CC_QUESTIONS": [
     "How do you personally prioritise and nurture your own social connections and relationships for your wellbeing?",
     "Can you share an example of how maintaining strong personal connections has positively influenced your own mental and emotional wellbeing?",
     "What advice or strategies do you have for employees who may be struggling with feeling isolated or disconnected in the workplace?",
@@ -191,4 +197,5 @@ CC_QUESTIONS = [
     "Are there specific corporate social responsibility (CSR) initiatives or philanthropic efforts in place to give back to your community?",
     "Can you provide examples of how your organisation's commitment to giving has contributed to the overall wellbeing and reputation of the business?",
     "How do you envision your organisation's dedication to promoting acts of kindness and giving evolving in the future?"
-]
+    ]
+}
